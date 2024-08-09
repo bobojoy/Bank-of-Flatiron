@@ -1,24 +1,28 @@
 # Bank of Flatiron
 Bank of Flatiron is a simple web application that manages and displays financial transactions. Users can view, add, and search transactions through a user-friendly interface. This project simulates a backend using React for the front end and JSON Server.
 
+## Components
+
+### `Form.js`
+
+Handles the input and submission of new transactions. It provides a form where users can enter details like date, description, category, and amount.
 
 
-## Features
+### `Header.js`
+
+ Displays the header of the application. It typically includes the application title or branding.
+
+### `Row.js`
+ Represents a single row in the transactions table. It displays individual transaction details such as date, description, category, and amount.
+
+ ### `Search.js`
+ Provides a search input field that allows users to filter transactions based on their descriptions.
+
+ ### `Table.js`
+ Renders the list of transactions in a tabular format. It uses Row.js to display each transaction.
 
 
 
-### View Transactions
-
-Display a list of transactions with details such as date, description, category, and amount.
-
-
-
-### Search Transactions
-
-Filter transactions based on the description.
-
-### Add Transactions
-Add new transactions to the list.
 
 
 ## Technologies Used
