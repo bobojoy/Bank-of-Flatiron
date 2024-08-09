@@ -1,5 +1,5 @@
 # Bank of Flatiron
-Bank of Flatiron is a simple web application designed to manage and display financial transactions. It allows users to view, add, and search transactions through a user-friendly interface. This project uses React for the frontend and JSON Server to simulate a backend.
+Bank of Flatiron is a simple web application that manages and displays financial transactions. Users can view, add, and search transactions through a user-friendly interface. This project simulates a backend using React for the front end and JSON Server.
 
 
 
@@ -35,40 +35,40 @@ For styling the application.
 
 ## Setup Instructions
 
-<ol> _ Clone thr Repository </ol>
+- Clone the Repository 
 
-git clone `(https://github.com/your-username/bank-of-flatiron.git
-cd bank-of-flatiron).`
+   git clone `(https://github.com/your-username/bank-of-flatiron.git
+   cd bank-of-flatiron).`
 
-<ol> _ Install Dependencies </ol>
+- Install Dependencies 
 
-Install the necessary npm packages:
+   Install the necessary npm packages:
 
- [npm install]
+     [npm install]
 
- <ol> Create and configure `db.json`</ol>
+- Create and configure `db.json`
 
- Ensure you have a db.json file in the root directory
+     Ensure you have a db.json file in the root directory
+  
+-  Run JSON Server
+    Start the JSON Server to serve the db.json file:
+    [npm run start: server]
 
- <ol> Run JSON Server</ol>
- Start the JSON Server to serve the db.json file:
- [npm run start:server]
+-  Run the React Application
+     Start the React application:
+     [npm start]
 
-  <ol> Run the React Application</ol>
-  Start the React application:
-  [npm start]
-
- Open your browser and navigate to `http://localhost:3001` to use the application. 
+-  Open your browser and navigate to `http://localhost:3001` to use the application. 
 
 ## Folder Structure
 
-- src/
+- src/:
  Contains all the React components and application logic.
 
- - db.json
+ - db.json:
  JSON file serving as the mock database.
 
- - public/
+ - public/:
  Static files and HTML template.
 
 
