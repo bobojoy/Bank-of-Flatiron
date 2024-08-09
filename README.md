@@ -3,22 +3,25 @@ Bank of Flatiron is a simple web application designed to manage and display fina
 
 
 
-## Features
+## Components
+
+### `Form.js`
+
+Handles the input and submission of new transactions. It provides a form where users can enter details like date, description, category, and amount.
 
 
+### `Header.js`
 
-### View Transactions
+ Displays the header of the application. It typically includes the application title or branding.
 
-Display a list of transactions with details such as date, description, category, and amount.
+### `Row.js`
+ Represents a single row in the transactions table. It displays individual transaction details such as date, description, category, and amount.
 
+ ### `Search.js`
+ Provides a search input field that allows users to filter transactions based on their descriptions.
 
-
-### Search Transactions
-
-Filter transactions based on the description.
-
-### Add Transactions
-Add new transactions to the list.
+ ### `Table.js`
+ Renders the list of transactions in a tabular format. It uses Row.js to display each transaction.
 
 
 ## Technologies Used
@@ -35,26 +38,26 @@ For styling the application.
 
 ## Setup Instructions
 
-<ol> _ Clone thr Repository </ol>
+- Clone thr Repository 
 
 git clone `(https://github.com/your-username/bank-of-flatiron.git
 cd bank-of-flatiron).`
 
-<ol> _ Install Dependencies </ol>
+- Install Dependencies 
 
 Install the necessary npm packages:
 
  [npm install]
 
- <ol> Create and configure `db.json`</ol>
+ - Create and configure `db.json`
 
  Ensure you have a db.json file in the root directory
 
- <ol> Run JSON Server</ol>
+ - Run JSON Server
  Start the JSON Server to serve the db.json file:
  [npm run start:server]
 
-  <ol> Run the React Application</ol>
+  - Run the React Application
   Start the React application:
   [npm start]
 
@@ -62,13 +65,13 @@ Install the necessary npm packages:
 
 ## Folder Structure
 
-- src/
+- src/:
  Contains all the React components and application logic.
 
- - db.json
+ - db.json:
  JSON file serving as the mock database.
 
- - public/
+ - public/:
  Static files and HTML template.
 
 
