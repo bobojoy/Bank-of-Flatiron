@@ -1,87 +1,74 @@
 import { useState } from "react";
-
-function Form({ handleNewData }) {
+export default function Form({ transactions, setTransactions }) {
+  const today = new Date();
   const [formData, setFormData] = useState({
+    date: "",
     description: "",
     category: "",
     amount: "",
-    date: "",
   });
 
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  function handleSubmit(event) {
+    event.preventDefault();
+    setTransactions([...transactions, formData]); // listing transactions to the frontend
   }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    setFormData({ description: "", category: "", amount: "", date: "" });
-
-    handleNewData(formData);
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   }
-
   return (
-    <form
-      className=""
-      onSubmit={handleSubmit}
-      style={{ border: "1px solid lightgrey" }}
-    >
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-        <div className="col-md-3 p-1 ">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Description"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            required
-          />
+    <>
+      <form onSubmit={handleSubmit}>
+        <div className="row border p-4 m-4">
+          <div className="col-3 mx-auto">
+            <input
+              className="form-control "
+              onChange={handleChange}
+              name="date"
+              value={formData.date}
+              type="date"
+              placeholder="date"
+            />
+          </div>
+          <div className="col-3 mx-auto">
+            <input
+              className="form-control form-control-sm col-3"
+              onChange={handleChange}
+              name="description"
+              value={formData.description}
+              placeholder="Enter description"
+              type="text"
+            />
+          </div>
+          <div className="col-3 mx-auto">
+            <input
+              className="form-control form-control-sm col-3"
+              onChange={handleChange}
+              name="category"
+              value={formData.category}
+              placeholder="Enter category"
+              type="tetst"
+            />
+          </div>
+          <div className="col-3 mx-auto">
+            <input
+              className="form-control form-control-sm col-3"
+              onChange={handleChange}
+              name="amount"
+              value={formData.amount}
+              placeholder="Enter amount"
+              type="number"
+            />
+          </div>
+          <div className="col-4 mx-auto">
+            <button type="submit" className="mx-auto btn btn-primary">
+              Add Transaction
+            </button>
+          </div>
         </div>
-
-        <div className="col-md-3 p-1">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Category"
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="col-md-3 p-1">
-          <input
-            type="number"
-            className="form-control"
-            placeholder="Amount"
-            name="amount"
-            value={formData.amount}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="col-md-3 d-flex align-items-center">
-          <label className="me-2"></label>
-          <input
-            type="date"
-            className="form-control"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            required
-          />
-        </div>
-      </div>
-
-      <button
-        type="submit"
-        className="btn btn-secondary col-md-2 mx-auto d-block mt-3"
-      >
-        Add Transaction
-      </button>
-    </form>
+      </form>
+    </>
   );
 }
-export default Form;

@@ -3,25 +3,22 @@ Bank of Flatiron is a simple web application designed to manage and display fina
 
 
 
-## Components
-
-### `Form.js`
-
-Handles the input and submission of new transactions. It provides a form where users can enter details like date, description, category, and amount.
+## Features
 
 
-### `Header.js`
 
- Displays the header of the application. It typically includes the application title or branding.
+### View Transactions
 
-### `Row.js`
- Represents a single row in the transactions table. It displays individual transaction details such as date, description, category, and amount.
+Display a list of transactions with details such as date, description, category, and amount.
 
- ### `Search.js`
- Provides a search input field that allows users to filter transactions based on their descriptions.
 
- ### `Table.js`
- Renders the list of transactions in a tabular format. It uses Row.js to display each transaction.
+
+### Search Transactions
+
+Filter transactions based on the description.
+
+### Add Transactions
+Add new transactions to the list.
 
 
 ## Technologies Used
@@ -38,30 +35,30 @@ For styling the application.
 
 ## Setup Instructions
 
-- Clone thr Repository 
+<ol> _ Clone thr Repository </ol>
 
-git clone `(https://github.com/your-username/bank-of-flatiron.git
-cd bank-of-flatiron).`
+   git clone `(https://github.com/your-username/bank-of-flatiron.git
+   cd bank-of-flatiron).`
 
 - Install Dependencies 
 
-Install the necessary npm packages:
+   Install the necessary npm packages:
 
- [npm install]
+     [npm install]
 
- - Create and configure `db.json`
+ <ol> Create and configure `db.json`</ol>
 
  Ensure you have a db.json file in the root directory
 
- - Run JSON Server
+ <ol> Run JSON Server</ol>
  Start the JSON Server to serve the db.json file:
  [npm run start:server]
 
-  - Run the React Application
+  <ol> Run the React Application</ol>
   Start the React application:
   [npm start]
 
- Open your browser and navigate to `http://localhost:3001` to use the application. 
+-  Open your browser and navigate to `http://localhost:3001` to use the application. 
 
 ## Folder Structure
 
@@ -76,5 +73,5 @@ Install the necessary npm packages:
 
 
 ## Author
-Joy Wambui.
+Joy 'Wambui'.
 

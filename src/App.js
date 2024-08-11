@@ -1,63 +1,39 @@
-import "./App.css";
-import Table from "./Components/Table";
-import Header from "./Components/Header";
-import Form from "./Components/Form";
-import Search from "./Components/Search";
 import { useState, useEffect } from "react";
-
+import "./App.css";
+import Search from "./Components/Search";
+import Table from "./Components/Table";
+import Form from "./Components/Form";
 function App() {
-  const [data, setData] = useState([]);
-  const [searchData, setSearchData] = useState("");
+  const [transactions, setTransactions] = useState([
+    {
+      id: 1,
+      date: "20/02/2024",
+      description: "Sunglasses",
+      category: "Fashion",
+      amount: "$20",
+    },
+    {
+      id: 2,
+      date: "25/02/2024",
+      description: "Birthday",
+      category: "Shopping",
+      amount: "$500",
+    },
+  ]);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch("http://localhost:5000/transactions");
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-    fetchData();
-  }, []);
-
-  function handleSearch(e) {
-    setSearchData(e.target.value);
-  }
-
-  const newData = data.filter((transaction) => {
-    if (searchData.length > 0) {
-      return transaction.description
-        .toLowerCase()
-        .includes(searchData.toLowerCase());
-    } else {
-      return true;
-    }
-  });
-
-  async function handleNewData(formData) {
-    try {
-      const response = await fetch("http://localhost:5000/transactions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const newTransaction = await response.json();
-      setData([...data, newTransaction]);
-    } catch (error) {
-      console.error("Error adding data:", error);
-    }
-  }
+  const addTransaction = (newTransaction) => {
+    setTransactions([...transactions, newTransaction]);
+  };
 
   return (
     <div className="container">
-      <Header />
-      <Search searchBar={handleSearch} />
-      <Form handleNewData={handleNewData} />
-      <Table transaction={newData} />
+      <div>
+        {" "}
+        <h1>The Royal Bank Of Flatiron </h1>{" "}
+      </div>
+      <Search transactions={transactions} setTransactions={setTransactions} />
+      <Form transactions={transactions} setTransactions={setTransactions} />
+      <Table transactions={transactions} setTransactions={setTransactions} />
     </div>
   );
 }

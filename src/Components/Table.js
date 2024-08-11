@@ -1,5 +1,6 @@
+import { useState } from "react";
 import Row from "./Row";
-function Table({ transaction }) {
+export default function Table({ transactions, setTransactions }) {
   return (
     <>
       <table className="table table-light">
@@ -9,14 +10,13 @@ function Table({ transaction }) {
             <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <Row transactions={transaction} />
+          <Row transactions={transactions} setTransactions={setTransactions} />
         </tbody>
       </table>
     </>
   );
 }
-
-export default Table;
