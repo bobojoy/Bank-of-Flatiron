@@ -68,13 +68,13 @@ For styling the application.
 
 ## Folder Structure
 
-- src/:
+- **src/**:
  Contains all the React components and application logic.
 
- - db.json:
+ - **db.json**:
  JSON file serving as the mock database.
 
- - public/:
+ - **public/**:
  Static files and HTML template.
 
 
