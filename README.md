@@ -35,12 +35,13 @@ For styling the application.
 
 ## Setup Instructions
 
-<ol> _ Clone thr Repository </ol>
+1.  **Clone thr Repository**
 
-   git clone `(https://github.com/your-username/bank-of-flatiron.git
+   git clone 
+   `(https://github.com/your-username/bank-of-flatiron.git
    cd bank-of-flatiron).`
 
-- Install Dependencies 
+Install Dependencies 
 
    Install the necessary npm packages:
 
