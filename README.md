@@ -37,10 +37,12 @@ For styling the application.
 
 1.  **Clone thr Repository**
 
-       git clone :
-       ```bash
-   https://github.com/your-username/bank-of-flatiron.git
+    ```bash
+
+       git clone https://github.com/your-username/bank-of-flatiron.git
    cd bank-of-flatiron
+      
+   
 
 2. **Install Dependencies** 
 
