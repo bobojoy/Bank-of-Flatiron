@@ -37,11 +37,12 @@ For styling the application.
 
 1.  **Clone thr Repository**
 
-   git clone 
+       git clone :
+       ```bash
    `(https://github.com/your-username/bank-of-flatiron.git
    cd bank-of-flatiron).`
 
-Install Dependencies 
+2. **Install Dependencies** 
 
    Install the necessary npm packages:
 
