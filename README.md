@@ -54,12 +54,13 @@ For styling the application.
 
 4. **Run JSON Server**
     Start the JSON Server to serve the db.json file:
-    
+
     [npm run start:server]
 
-  <ol> Run the React Application</ol>
-  Start the React application:
-  [npm start]
+5. **Run the React Application**
+   Start the React application:
+
+    [npm start]
 
 -  Open your browser and navigate to `http://localhost:3001` to use the application. 
 
