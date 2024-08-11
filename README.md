@@ -44,17 +44,18 @@ For styling the application.
 
 2. **Install Dependencies** 
 
-   Install the necessary npm packages:
+    Install the necessary npm packages:
 
      [npm install]
 
- <ol> Create and configure `db.json`</ol>
+3. **Create and configure `db.json`**
 
- Ensure you have a db.json file in the root directory
+    Ensure you have a db.json file in the root directory
 
- <ol> Run JSON Server</ol>
- Start the JSON Server to serve the db.json file:
- [npm run start:server]
+4. **Run JSON Server**
+    Start the JSON Server to serve the db.json file:
+    
+    [npm run start:server]
 
   <ol> Run the React Application</ol>
   Start the React application:
