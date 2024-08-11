@@ -39,8 +39,8 @@ For styling the application.
 
        git clone :
        ```bash
-   `(https://github.com/your-username/bank-of-flatiron.git
-   cd bank-of-flatiron).`
+   https://github.com/your-username/bank-of-flatiron.git
+   cd bank-of-flatiron
 
 2. **Install Dependencies** 
 
